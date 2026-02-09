@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Added proper responsive meta viewport tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Modern Portfolio - Clean, Minimal, Professional">
+    <meta name="keywords" content="portfolio, web developer, creative developer, frontend">
+    <meta name="author" content="Abdallah Thyab">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+
+    <script src="script.js" defer></script>
+    <title>Abdallah Thyab | Software Engineer</title>
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>P</text></svg>">
+
+    <!-- Dark Mode Fix -->
+    <style>
+        /* Ensure theme transition works */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header__inner">
+                <!-- Logo -->
+                <a href="#home" class="header__logo">
+                    <i class="fas fa-laptop-code logo__symbol"></i>
+                    <span class="logo__text">Abdallah Thyab</span>
+                </a>
+
+
+
+                <!-- Navigation Menu -->
+                <nav class="nav" role="navigation" aria-label="Main navigation">
+                    <input type="checkbox" id="nav-toggle" class="nav__toggle" hidden>
+                    <label for="nav-toggle" class="nav__toggle-label" aria-expanded="false" aria-controls="nav-menu">
+                        <span class="nav__toggle-icon"></span>
+                        <span class="visually-hidden">Menu</span>
+                    </label>
+
+                    <ul class="nav__menu" id="nav-menu">
+                        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Dark Mode Toggle -->
+                <button class="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark/light mode">
+                    <span class="theme-toggle__icon">
+                        <i class="fas fa-moon theme-icon--dark"></i>
+                        <i class="fas fa-sun theme-icon--light"></i>
+                    </span>
+                    <span class="theme-toggle__text">Mode</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Added main wrapper for semantic structure and better accessibility -->
+    <main id="main-content" role="main">
+        <!-- Hero Section -->
+        <section id="home" class="hero" role="region" aria-label="Introduction">
+            <div class="container">
+                <!-- Added wrapper for better responsive layout control -->
+                <div class="hero__inner">
+                    <div class="hero__content">
+                        <div class="hero__badge">
+                            <span>Software Engineer</span>
+                            <div class="shine"></div>
+                        </div>
+                        <h1 class="hero__title">
+                            <span class="hero__title-line">Crafting Innovative</span>
+                            <span class="hero__title-line hero__title-line--highlight">Software Solutions</span>
+                            <span class="hero__title-line">For Real Impact</span>
+                        </h1>
+
+                        <p class="hero__description">
+                            I design and develop efficient, user-focused software that transforms ideas into practical
+                            digital experiences. Every project is a chance to create meaningful, high-quality solutions.
+                        </p>
+
+
+                        <div class="hero__actions">
+                            <a href="#projects" class="btn btn--primary">
+                                <span class="btn__text">View Projects</span>
+                                <span class="btn__icon" aria-hidden="true">→</span>
+                            </a>
+                            <a href="#contact" class="btn btn--ghost">
+                                <span class="btn__text">Get in Touch</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero__visual" aria-hidden="true">
+                        <div class="hero__visual-inner">
+                            <!-- Abstract geometric design -->
+                            <div class="visual-element visual-element--1"></div>
+                            <div class="visual-element visual-element--2"></div>
+                            <div class="visual-element visual-element--3"></div>
+                            <div class="visual-element visual-element--4"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects" role="region" aria-label="Projects">
+            <div class="container">
+                <div class="section__header">
+                    <h2 class="section__title">Featured Projects</h2>
+                    <p class="section__subtitle">Selected work combining design and technology</p>
+                </div>
+
+                <!-- Wrapped grid in a div with responsive role for better mobile handling -->
+                <div class="projects__grid" role="list" aria-label="Project list">
+                    <!-- Project 1: Live (No Blur) -->
+                    <article class="project-card" role="article" data-live="true">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-graduation-cap"></i>
+                                    </span>
+                                    <span class="project-card__image-text">Tawjihi Platform</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">Live</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Education</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Tawjihi Platform</h3>
+
+                            <p class="project-card__description">
+                                Comprehensive platform for Tawjihi students to access study materials,
+                                practice quizzes, and track academic progress.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>Responsive</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="https://abdallahthyab1.github.io/tawjihi-platform/"
+                                    class="btn btn--small btn--primary" target="_blank" rel="noopener noreferrer"
+                                    aria-label="Visit Tawjihi Platform Project">
+                                    <span>Visit Project</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 2: Not Live (Blurred) -->
+                    <article class="project-card" role="article" data-live="false">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-shopping-cart"></i>
+                                    </span>
+                                    <span class="project-card__image-text">E-Commerce</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">Coming Soon</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">E-Commerce</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Modern Storefront</h3>
+
+                            <p class="project-card__description">
+                                Full-featured e-commerce platform with cart functionality, user authentication,
+                                and payment integration.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>React</span>
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Stripe</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="#" onclick="return false" class="btn btn--small btn--primary" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Preview Modern Storefront Project">
+                                    <span>Preview</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 3: Not Live (Blurred) -->
+                    <article class="project-card" role="article" data-live="false">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-tasks"></i>
+                                    </span>
+                                    <span class="project-card__image-text">Task Manager</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">In Development</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Productivity</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Smart Task Manager</h3>
+
+                            <p class="project-card__description">
+                                Intelligent task management system with AI-powered prioritization,
+                                team collaboration, and progress tracking.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>Vue.js</span>
+                                <span>Firebase</span>
+                                <span>AI Integration</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="#" onclick="return false" class="btn btn--small btn--primary" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Preview Smart Task Manager Project">
+                                    <span>Preview</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 4: Not Live (Blurred) -->
+                    <article class="project-card" role="article" data-live="false">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-chart-line"></i>
+                                    </span>
+                                    <span class="project-card__image-text">Analytics</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">In Development</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Analytics</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Data Dashboard</h3>
+
+                            <p class="project-card__description">
+                                Real-time data visualization dashboard with interactive charts,
+                                custom reporting, and team collaboration features.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>D3.js</span>
+                                <span>Python</span>
+                                <span>WebSockets</span>
+                                <span>Chart.js</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="#" onclick="return false" class="btn btn--small btn--primary" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Preview Data Dashboard Project">
+                                    <span>Preview</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 5: Not Live (Blurred) -->
+                    <article class="project-card" role="article" data-live="false">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-mobile-alt"></i>
+                                    </span>
+                                    <span class="project-card__image-text">Mobile App</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">Coming Soon</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Mobile</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Fitness Tracker App</h3>
+
+                            <p class="project-card__description">
+                                Mobile application for tracking fitness progress, workout routines,
+                                nutrition planning, and health metrics.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>React Native</span>
+                                <span>HealthKit API</span>
+                                <span>Firebase</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="#" onclick="return false" class="btn btn--small btn--primary" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Preview Fitness Tracker App Project">
+                                    <span>Preview</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Project 6: Not Live (Blurred) -->
+                    <article class="project-card" role="article" data-live="false">
+                        <div class="project-card__image">
+                            <div class="project-card__image-inner"
+                                style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);">
+                                <div class="project-card__image-content">
+                                    <span class="project-card__image-icon" aria-hidden="true">
+                                        <i class="fas fa-video"></i>
+                                    </span>
+                                    <span class="project-card__image-text">Media</span>
+                                </div>
+                            </div>
+                            <div class="project-card__overlay">
+                                <span class="project-card__status">In Development</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card__content">
+                            <div class="project-card__meta">
+                                <span class="project-card__category">Media</span>
+                                <span class="project-card__year">2024</span>
+                            </div>
+
+                            <h3 class="project-card__title">Video Platform</h3>
+
+                            <p class="project-card__description">
+                                Video streaming platform with content management, user profiles,
+                                watch history, and recommendation system.
+                            </p>
+
+                            <div class="project-card__technologies">
+                                <span>Next.js</span>
+                                <span>Video.js</span>
+                                <span>PostgreSQL</span>
+                                <span>AWS</span>
+                            </div>
+
+                            <div class="project-card__actions">
+                                <a href="#" onclick="return false" class="btn btn--small btn--primary" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Preview Video Platform Project">
+                                    <span>Preview</span>
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about" role="region" aria-label="About">
+            <div class="container">
+                <!-- Added wrapper for better responsive layout -->
+                <div class="about__inner">
+                    <div class="about__content">
+                        <h2 class="section__title">About Me</h2>
+
+                        <p class="about__description">
+                            I'm Abdullah, a Computer Systems Engineering student and a dedicated software developer.
+                            I excel in C++, Java, and Object-Oriented Programming (OOP), with strong expertise in Data
+                            Structures, MySQL, and efficient software design.
+                            I craft clean, maintainable, and scalable solutions, driven by curiosity and a continuous
+                            passion for learning new technologies.
+                            My goal is to turn complex problems into elegant digital solutions that make a real impact.
+                        </p>
+
+
+                        <div class="about__stats">
+                            <div class="stat">
+                                <span class="stat__number">10+</span>
+                                <span class="stat__label">Projects</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">2+</span>
+                                <span class="stat__label">Years</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat__number">100%</span>
+                                <span class="stat__label">Satisfaction</span>
+                            </div>
+                        </div>
+
+                        <div class="about__skills">
+                            <h3 class="about__skills-title">Core Skills</h3>
+                            <div class="skills__list">
+                                <span class="skill">C++</span>
+                                <span class="skill">Java</span>
+                                <span class="skill">Assembly 8086</span>
+                                <span class="skill">Object-Oriented Programming (OOP)</span>
+                                <span class="skill">Data Structures & Algorithms</span>
+                                <span class="skill">MySQL & Databases</span>
+                                <span class="skill">HTML & CSS</span>
+                                <span class="skill">JavaScript</span>
+                                <span class="skill">Responsive Design</span>
+                                <span class="skill">UI/UX Principles</span>
+                                <span class="skill">Problem Solving & Optimization</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="about__visual" aria-hidden="true">
+                        <div class="about__visual-inner">
+                            <!-- Visual elements -->
+                            <div class="dot-grid"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact" role="region" aria-label="Contact">
+            <div class="container">
+                <!-- Added wrapper for better responsive layout -->
+                <div class="contact__inner">
+                    <div class="contact__content">
+                        <h2 class="section__title">Let's Work Together</h2>
+                        <p class="contact__description">
+                            I’m a software developer skilled in programming languages like Java and C++,
+                            with strong knowledge of data structures, object-oriented programming, and databases.
+                            If you have a project or idea, I’m ready to collaborate and build efficient, high-quality
+                            solutions.
+                        </p>
+
+
+                        <div class="contact__methods">
+                            <a href="mailto:1abdallahthyab@gmail.com" class="contact__method">
+                                <div class="contact__method-icon" aria-hidden="true">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="contact__method-info">
+                                    <h3>Email</h3>
+                                    <p>1abdallahthyab@gmail.com</p>
+                                </div>
+                            </a>
+
+                            <div class="contact__method">
+                                <div class="contact__method-icon" aria-hidden="true">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div class="contact__method-info">
+                                    <h3>Phone</h3>
+                                    <p>+970 598786853</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact__social">
+                            <a href="https://www.linkedin.com/in/abdallah-thyab1/" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://github.com/AbdallahThyab1" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="GitHub Profile">
+                                <i class="fab fa-github" aria-hidden="true"></i>
+                            </a>
+                            <a href="https://codeforces.com/profile/AbdallahThyab" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="Codeforces Profile">
+                                <i class="fas fa-code" aria-hidden="true"></i>
+                            </a>
+
+                            <a href="https://wa.me/970598786853" class="social-link" target="_blank"
+                                rel="noopener noreferrer" aria-label="WhatsApp Contact">
+                                <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            </a>
+
+                        </div>
+                    </div>
+
+                    <div class="contact__form">
+                        <form class="form" id="contact-form">
+                            <div class="form__group">
+                                <label for="name" class="form__label">Name</label>
+                                <input type="text" id="name" name="name" class="form__input" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="email" class="form__label">Email</label>
+                                <input type="email" id="email" name="email" class="form__input" required>
+                            </div>
+
+                            <div class="form__group">
+                                <label for="message" class="form__label">Message</label>
+                                <textarea id="message" name="message" class="form__textarea" rows="5"
+                                    required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn--primary btn--full">
+                                <span class="btn__text">Send Message</span>
+                                <span class="btn__icon" aria-hidden="true">→</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main> <!-- End of main content -->
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <!-- Added wrapper for better responsive layout -->
+            <div class="footer__inner">
+                <div class="footer__brand">
+                    <a href="#home" class="footer__logo" aria-label="Home">
+                        <span class="footer__logo-symbol" aria-hidden="true">A</span>
+                        <span class="footer__logo-text">Abdullah Thyab</span>
+                    </a>
+                    <p class="footer__tagline">Software Development | C++, Java, OOP & Web Solutions</p>
+                </div>
+
+
+                <div class="footer__links">
+                    <div class="footer__links-column">
+                        <h3 class="footer__links-title">Navigation</h3>
+                        <ul class="footer__links-list">
+                            <li><a href="#home" class="footer__link">Home</a></li>
+                            <li><a href="#projects" class="footer__link">Projects</a></li>
+                            <li><a href="#about" class="footer__link">About</a></li>
+                            <li><a href="#contact" class="footer__link">Contact</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer__links-column">
+                        <h3 class="footer__links-title">Connect</h3>
+                        <ul class="footer__links-list">
+                            <li><a href="https://www.linkedin.com/in/abdallah-thyab1/" class="footer__link"
+                                    target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="https://github.com/AbdallahThyab1" class="footer__link" target="_blank"
+                                    rel="noopener noreferrer">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p class="footer__copyright">
+                    © <span id="currentYear">2024</span> Portfolio. All rights reserved.
+                </p>
+                <p class="footer__note">Built with pure HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode & Enhanced JavaScript -->
+    <script>
+        // ============================================
+        // PORTFOLIO ENGINE - FINAL VERSION
+        // ============================================
+
+        (function () {
+            'use strict';
+
+            // DOM Elements
+            const html = document.documentElement;
+            const themeToggle = document.querySelector('.theme-toggle');
+            const currentYearSpan = document.getElementById('currentYear');
+            const contactForm = document.getElementById('contact-form');
+
+            // ========== DARK MODE ==========
+            function initDarkMode() {
+                // Get saved theme or system preference
+                const savedTheme = localStorage.getItem('portfolio-theme');
+                const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+                // Apply theme
+                if (savedTheme) {
+                    html.setAttribute('data-theme', savedTheme);
+                } else if (systemPrefersDark) {
+                    html.setAttribute('data-theme', 'dark');
+                    localStorage.setItem('portfolio-theme', 'dark');
+                } else {
+                    html.setAttribute('data-theme', 'light');
+                }
+
+                // Toggle functionality
+                if (themeToggle) {
+                    themeToggle.addEventListener('click', function () {
+                        const currentTheme = html.getAttribute('data-theme');
+                        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+
+                        // Apply new theme
+                        html.setAttribute('data-theme', newTheme);
+                        localStorage.setItem('portfolio-theme', newTheme);
+
+                        // Button animation
+                        this.style.transform = 'scale(0.9)';
+                        setTimeout(() => {
+                            this.style.transform = '';
+                        }, 150);
+
+                        console.log('Theme changed to:', newTheme);
+                    });
+                }
+
+                // Listen for system theme changes
+                const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+                mediaQuery.addEventListener('change', (e) => {
+                    if (!localStorage.getItem('portfolio-theme')) {
+                        const newTheme = e.matches ? 'dark' : 'light';
+                        html.setAttribute('data-theme', newTheme);
+                        localStorage.setItem('portfolio-theme', newTheme);
+                    }
+                });
+            }
+
+            // ========== UTILITIES ==========
+            function setCurrentYear() {
+                if (currentYearSpan) {
+                    currentYearSpan.textContent = new Date().getFullYear();
+                }
+            }
+
+            function initSmoothScroll() {
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        const href = this.getAttribute('href');
+                        if (href === '#') return;
+
+                        const targetElement = document.querySelector(href);
+                        if (!targetElement) return;
+
+                        // Close mobile menu if open
+                        const navToggle = document.getElementById('nav-toggle');
+                        if (navToggle && navToggle.checked) {
+                            navToggle.checked = false;
+                        }
+
+                        // Smooth scroll
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    });
+                });
+            }
+
+            function initForm() {
+                if (!contactForm) return;
+
+                contactForm.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    const submitButton = this.querySelector('button[type="submit"]');
+                    const originalText = submitButton.innerHTML;
+
+                    // Show loading state
+                    submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                    submitButton.disabled = true;
+
+                    // Simulate API call
+                    setTimeout(() => {
+                        // Success state
+                        submitButton.innerHTML = '<i class="fas fa-check"></i> Sent!';
+                        submitButton.style.backgroundColor = '#10b981';
+
+                        // Reset form
+                        contactForm.reset();
+
+                        // Reset button after delay
+                        setTimeout(() => {
+                            submitButton.innerHTML = originalText;
+                            submitButton.disabled = false;
+                            submitButton.style.backgroundColor = '';
+                        }, 3000);
+                    }, 1500);
+                });
+            }
+
+            function initMobileMenu() {
+                const navToggle = document.getElementById('nav-toggle');
+                const navMenu = document.getElementById('nav-menu');
+
+                if (!navToggle || !navMenu) return;
+
+                // Close menu when clicking outside
+                document.addEventListener('click', (e) => {
+                    if (window.innerWidth > 768) return;
+
+                    const isClickInsideMenu = navMenu.contains(e.target);
+                    const isClickOnToggle = e.target.closest('.nav__toggle-label');
+
+                    if (!isClickInsideMenu && !isClickOnToggle && navToggle.checked) {
+                        navToggle.checked = false;
+                    }
+                });
+            }
+
+            // ========== INITIALIZATION ==========
+            function init() {
+                console.log('🚀 Portfolio initialized');
+
+                // Initialize all features
+                setCurrentYear();
+                initDarkMode();
+                initSmoothScroll();
+                initForm();
+                initMobileMenu();
+
+                // Remove no-js class
+                html.classList.remove('no-js');
+
+                // Dispatch ready event
+                setTimeout(() => {
+                    document.dispatchEvent(new CustomEvent('portfolio:ready'));
+                }, 100);
+            }
+
+            // Run initialization
+            if (document.readyState === 'loading') {
+                document.addEventListener('DOMContentLoaded', init);
+            } else {
+                init();
+            }
+
+            // Global methods for debugging
+            window.Portfolio = {
+                toggleTheme: function () {
+                    const currentTheme = html.getAttribute('data-theme');
+                    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+                    html.setAttribute('data-theme', newTheme);
+                    localStorage.setItem('portfolio-theme', newTheme);
+                }
+            };
+
+        })();
+    </script>
+</body>
+
+</html>
